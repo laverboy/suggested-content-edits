@@ -1,0 +1,28 @@
+{
+
+  "manifest_version": 2,
+  "name": "Editify",
+  "version": "1.0",
+
+  "description": "highlights words to edit",
+
+  "permissions": ["menus","tabs"],
+
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.mozilla.org/*"],
+      "js": ["editify.js"]
+    }
+  ],
+
+  "background": {
+    "scripts": ["background-script.js"]
+  },
+
+  "web_accessible_resources" : ["*.html"]
+
+}
