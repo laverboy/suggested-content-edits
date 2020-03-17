@@ -6,7 +6,7 @@
 
   "description": "highlights words to edit",
 
-  "permissions": ["menus","tabs"],
+  "permissions": ["tabs","storage"],
 
   "icons": {
     "48": "icons/border-48.png"
@@ -14,7 +14,7 @@
 
   "content_scripts": [
     {
-      "matches": ["*://*.mozilla.org/*"],
+      "matches": ["<all_urls>"],
       "js": ["editify.js"]
     }
   ],
@@ -23,6 +23,11 @@
     "scripts": ["background-script.js"]
   },
 
-  "web_accessible_resources" : ["*.html"]
+  "browser_action": {
+    "default_icon": "icons/border-48.png",
+    "default_popup": "popup.html"
+  },
+
+  "web_accessible_resources" : ["*.html", "*.css"]
 
 }

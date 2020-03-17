@@ -1,0 +1,43 @@
+@import "http://fonts.googleapis.com/css?family=Raleway";
+
+html, body {
+    background-color: #ff8a00;
+    background-image: linear-gradient(0deg,#e52e71,#ff8a00);
+
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    width: 450px;
+    height: 300px;
+}
+
+textarea {
+    width: 96%;
+    font-family: 'Raleway', sans-serif;
+    padding: 2%;
+    margin-top: 2%;
+}
+
+button {
+    font-weight: bold;
+    padding: 2%;
+    border-radius: 8px;
+    color: #fff ;
+    border: 0;
+    background-color: #100e17;
+    cursor: pointer;
+    margin-top: 2%;
+}
+
+.selectionMade .noselection {
+    display: none;
+}
+
+.withselection {
+    display: none;
+}
+
+.selectionMade .withselection {
+    display: block;
+}
