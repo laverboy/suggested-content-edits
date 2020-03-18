@@ -26,6 +26,11 @@ document.addEventListener('DOMContentLoaded', function () {
         data.editedText = e.target.children.code.value;
         data.timestamp = Date.now();
 
+        if (data.editedText === data.originalText) {
+            document.getElementById('noedit').classList.add("visible");
+            return false;
+        }
+
         fetch("https://kg4bf2ru4b.execute-api.eu-west-2.amazonaws.com/test/edits", {
             method: 'POST',
             mode: 'cors',
@@ -43,7 +48,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 console.error('Error:', error);
                 showError();
             });
-
 
     })
 }, false);

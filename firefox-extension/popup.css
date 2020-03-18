@@ -35,7 +35,11 @@ button {
     margin-top: 2%;
 }
 
-.noselection, .withselection, .success, .error {
+#noedit.visible {
+    display: inline;
+}
+
+.noselection, .withselection, .success, .error, #noedit {
     display: none;
 }
 
