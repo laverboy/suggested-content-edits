@@ -5,11 +5,16 @@ html, body {
     background-image: linear-gradient(0deg,#e52e71,#ff8a00);
 
     font-family: 'Raleway', sans-serif;
+    color: #fff;
 }
 
 body {
     width: 450px;
     height: 300px;
+}
+
+p {
+    padding: 2%;
 }
 
 textarea {
@@ -30,14 +35,22 @@ button {
     margin-top: 2%;
 }
 
-.selectionMade .noselection {
+.noselection, .withselection, .success, .error {
     display: none;
 }
 
-.withselection {
-    display: none;
+.start .noselection {
+    display: block;
 }
 
 .selectionMade .withselection {
+    display: block;
+}
+
+.submitSuccess .success {
+    display: block;
+}
+
+.submitError .error {
     display: block;
 }

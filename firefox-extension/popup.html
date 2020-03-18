@@ -7,17 +7,25 @@
     <link rel="stylesheet" type="text/css" href="popup.css">
 </head>
 <body>
-<div id="wrapper" class="">
+<div id="wrapper" class="start">
     <div class="noselection">
         <p>Make a text selection on a webpage and come back here</p>
     </div>
 
     <div class="withselection">
         <form id="form">
-            <label for="code">Selection</label>
+            <label for="code">Suggest an edit</label>
             <textarea id="code" placeholder="We are just here to help..." cols="30" rows="10"></textarea>
             <button type="submit" id="checkPage">Submit edit</button>
         </form>
+    </div>
+
+    <div class="success">
+        <p>Thank you for support</p>
+    </div>
+
+    <div class="error">
+        <p>An error occurred, please try again later</p>
     </div>
 </div>
 </body>
