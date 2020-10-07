@@ -21,4 +21,11 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+ins {
+  color: #42b983;
+}
+del {
+  color: #cb3837;
+}
 </style>
