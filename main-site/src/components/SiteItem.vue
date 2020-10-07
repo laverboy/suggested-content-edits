@@ -8,7 +8,7 @@
       <p class="mt-2 text-gray-600" v-html="$options.filters.diff(item.originalText, item.editedText)"></p>
     </div>
     <div class="flex justify-between items-center mt-4">
-      <a class="text-blue-600 hover:underline" href="#">{{ item.pageID }}</a>
+      <a class="text-blue-600 hover:underline" v-bind:href="'https://'+item.siteID + item.pageID" target="_blank">{{ item.pageID }}</a>
     </div>
   </div>
 </template>

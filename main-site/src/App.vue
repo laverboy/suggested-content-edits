@@ -16,8 +16,9 @@ export default {
 </script>
 
 <style>
+@import "http://fonts.googleapis.com/css?family=Raleway";
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Raleway, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
