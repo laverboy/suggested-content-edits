@@ -1,15 +1,33 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      Enter a web address to see a list of edits
-    </p>
-    <label>
-      <input v-model="siteToLookup" placeholder="www.mysite.com" type="text" v-on:keyup.enter="submit">
-    </label>
-    <div>
-      <item v-for="item in items" v-bind:item="item" v-bind:key="item.editID.S"></item>
+  <div class="container">
+    <!-- hero headline -->
+    <div class="hero-headline flex flex-col items-center justify-center pt-24 text-center">
+      <h1 class=" font-bold text-3xl text-gray-900">{{ msg }}</h1>
+      <p class=" font-base text-base text-gray-600">enter a web address to see a list of edits</p>
     </div>
+
+    <!-- image search box -->
+    <div class="box pt-6">
+      <div class="box-wrapper">
+
+        <div class=" bg-white rounded flex items-center w-full p-3 shadow-sm border border-gray-200">
+          <button @click="getImages()" class="outline-none focus:outline-none">
+            <svg class=" w-5 text-gray-600 h-5 cursor-pointer" fill="none" stroke-linecap="round"
+                 stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24">
+              <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+          </button>
+          <input type="search" name="" id="" v-model="siteToLookup" v-on:keyup.enter="submit"
+                 placeholder="www.mysite.com"
+                 class="w-full pl-4 text-sm outline-none focus:outline-none bg-transparent">
+        </div>
+
+      </div>
+    </div>
+
+    <!-- search results -->
+    <item v-for="item in items" v-bind:item="item" v-bind:key="item.editID.S"></item>
+
   </div>
 </template>
 
@@ -74,12 +92,6 @@ export default {
 <style scoped>
 h3 {
   margin: 40px 0 0;
-}
-
-input {
-  width: 100%;
-  padding: 10px;
-  font-size: 1.8em;
 }
 
 a {
